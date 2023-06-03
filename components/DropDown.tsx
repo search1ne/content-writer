@@ -10,14 +10,14 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export type VibeType = "FaceBook" | "Instagram" | "Shorts (Reels, TikTok)";
+export type VibeType = "FaceBook" | "Short Video Scripts (Reels, TikTok)";
 
 interface DropDownProps {
   vibe: VibeType;
   setVibe: (vibe: VibeType) => void;
 }
 
-let vibes: VibeType[] = ["FaceBook", "Instagram", "Shorts (Reels, TikTok)"];
+let vibes: VibeType[] = ["FaceBook", "Short Video Scripts (Reels, TikTok)"];
 
 export default function DropDown({ vibe, setVibe }: DropDownProps) {
   return (

@@ -5,7 +5,6 @@ import { useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import DropDown, { VibeType } from "../components/DropDown";
 import Footer from "../components/Footer";
-import Github from "../components/GitHub";
 import Header from "../components/Header";
 import LoadingDots from "../components/LoadingDots";
 
@@ -24,11 +23,11 @@ const Home: NextPage = () => {
   };
 
   const prompt = `You are a content creator for a facial day spa small business called Radiance Day Spa. Generate a helpful content for ${vibe} based on this context: ${bio} ${
-    vibe === "Shorts (Reels, TikTok)"
+    vibe === "Short Video Scripts (Reels, TikTok)"
       ? "Write a script for a 2-4 minute short video that will be posted on TikTok or Reels."
       : null
   }
-      Make sure that the generated content is less than 256 tokens, is formatted for use on facebook, no hashtags, and properly format for FaceBook using best practices.${
+      Make sure that the generated content is less than 256 tokens, is formatted for use on facebook, no hashtags, and properly format for FaceBook using best practices. ${
     bio.slice(-1) === "." ? "" : "."
   }`;
 
@@ -81,9 +80,9 @@ const Home: NextPage = () => {
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
         
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          skincare content creator
+          social media manager for radiance day spa
         </h1>
-        <p className="text-slate-500 mt-5">content creator for radiance day spa. generate content for facebook, instagram and tiktok</p>
+        <p className="text-slate-500 mt-5">post content for facebook. get scripts for short videos</p>
         <div className="max-w-xl w-full">
           <div className="flex mt-10 items-center space-x-3">
             <Image
@@ -107,7 +106,7 @@ const Home: NextPage = () => {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              "skin care tips, hydration, microdermabrasion, etc."
+              "skin care tips, hydration, facial massage benefits, etc."
             }
           />
           <div className="flex mb-5 items-center space-x-3">
@@ -145,14 +144,14 @@ const Home: NextPage = () => {
           {generatedBios && (
             <>
               <div>
-                <h2
+                <h4
                   className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
                   ref={bioRef}
                 >
-                  generated content: click to copy
-                </h2>
+                  generated content may not 100% accurate, please review before posting.
+                </h4>
                 <span className="text-slate-500">
-                (generated content are not 100% accurate, please review before posting.)
+                (click content to copy)
               </span>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
@@ -162,7 +161,7 @@ const Home: NextPage = () => {
                   .map((generatedBio) => {
                     return (
                       <div
-                        className="bg-blue rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
+                        className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
                         onClick={() => {
                           navigator.clipboard.writeText(generatedBio);
                           toast("content copied to clipboard", {
