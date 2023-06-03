@@ -7,13 +7,13 @@ export default function Header() {
       <Link href="/" className="flex space-x-3">
         <Image
           alt="header text"
-          src="/pd-logo-black.svg"
+          src="/rdspurple.png"
           className="m:w-12 m:h-12 w-16 h-16"
-          width={32}
-          height={32}
+          width={300}
+          height={300}
         />
         <h1 className="sm:text-4xl text-2xl font-bold ml-2 tracking-tight">
-          bio-generatoor
+          Radiance Day Spa
         </h1>
       </Link>
       <a
@@ -21,13 +21,6 @@ export default function Header() {
         target="_blank"
         rel="noreferrer"
       >
-        <Image
-          alt="Vercel Icon"
-          src="/luckyzero-modified.svg"
-          className="m:w-12 m:h-12 w-16 h-16"
-          width={32}
-          height={32}
-        />
       </a>
     </header>
   );
