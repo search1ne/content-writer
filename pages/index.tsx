@@ -149,8 +149,11 @@ const Home: NextPage = () => {
                   className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto"
                   ref={bioRef}
                 >
-                  generated content:
+                  generated content: click to copy
                 </h2>
+                <span className="text-slate-500">
+                (generated content are not 100% accurate, please review before posting.)
+              </span>
               </div>
               <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
                 {generatedBios

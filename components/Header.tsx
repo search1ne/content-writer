@@ -9,8 +9,8 @@ export default function Header() {
           alt="header text"
           src="/rdspurple.png"
           className="m:w-12 m:h-12 w-16 h-16"
-          width={300}
-          height={300}
+          width={100}
+          height={100}
         />
         <h1 className="sm:text-4xl text-2xl font-bold ml-2 tracking-tight">
           Radiance Day Spa
